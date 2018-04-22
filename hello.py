@@ -5,4 +5,9 @@ def hello(environ, start_response):
     start_response(status, response_headers)
     #return ['Hello !!! world!\n']
     aaa = environ["QUERY_STRING"]
-    return aaa.split("&")
+    bbb = aaa.split("&")
+    ddd = []
+    for c in bbb:
+        c = c + "\n"
+        ddd.append(c)
+    return ddd
