@@ -5,5 +5,8 @@ def hello(environ, start_response):
     start_response(status, response_headers)
     #return ['Hello !!! world!\n']
     aaa = environ["QUERY_STRING"]
+
     return bytes(aaa.replace("&", "\n"), 'utf-8')
     #return aaa.replace("&", "\n")
+
+
